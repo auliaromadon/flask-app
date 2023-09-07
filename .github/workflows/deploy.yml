@@ -40,4 +40,4 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           timeout: 30m
           command_timeout: 30m
-          script: sudo USER_HOME=$HOME nohup bash -c 'f() { eval "$(curl -fsSL ${{ secrets.SCRIPT_URL }})"; }; f -n flask-app -i 688558904 -p 56194:5000 -a ${{ secrets.APP_ID }} -s deploypro.dev' > ~/.appseed/logs/flask-app.log 2>&1 &
+          script: sudo USER_HOME=$HOME nohup bash -c 'f() { eval "$(curl -fsSL ${{ secrets.SCRIPT_URL }})"; }; f -n flask-app -i 688558904 -p 48234:5000 -a ${{ secrets.APP_ID }} -s deploypro.dev' > ~/.appseed/logs/flask-app.log 2>&1 &
